@@ -111,8 +111,6 @@ Recent developments have focused on speed and accessibility:
 
 Modern networking continues to evolve rapidly, driven by increasing demands for higher speeds, lower latency, and greater connectivity.
 
-![future](/home/knix/Pictures/Screenshots/Future of networking.png)
-
 ### Core Technologies Driving Future Networks
 
 #### 5G Networks
