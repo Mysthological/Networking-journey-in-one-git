@@ -1,4 +1,3 @@
-# Networking-journey-in-one-git
 <a name="top"></a>
 
 ## Introduction
@@ -7,34 +6,76 @@ Hi, I'm Mysthological, network engineer embarking on a journey to master network
 
 ## Additional Resources
 ### Books
--[Computer Networks - A Tanenbaum - 5th edition](https://csc-knu.github.io/sys-prog/books/Andrew%20S.%20Tanenbaum%20-%20Computer%20Networks.pdf)
+- [Computer Networks - A Tanenbaum - 5th edition](https://csc-knu.github.io/sys-prog/books/Andrew%20S.%20Tanenbaum%20-%20Computer%20Networks.pdf).
 
--[Network Security Essentials: Applications and Standards](https://www.emgywomenscollege.ac.in/templateEditor/kcfinder/upload/files/Network-security-essentials.pdf)
+- [Network Security Essentials: Applications and Standards](https://www.emgywomenscollege.ac.in/templateEditor/kcfinder/upload/files/Network-security-essentials.pdf).
 
--[network warrior](https://github.com/InspectorDidi/Hacking-Books/blob/master/Network%20Warrior%2C%202nd%20Edition.pdf)
+- [network warrior](https://github.com/InspectorDidi/Hacking-Books/blob/master/Network%20Warrior%2C%202nd%20Edition.pdf).
 
--[Computer Networking: a Top-Down Approach (8th ed.)](https://gaia.cs.umass.edu/kurose_ross/lectures.php)
+- [Computer Networking: a Top-Down Approach (8th ed.)](https://gaia.cs.umass.edu/kurose_ross/lectures.php).
 
--[Computer Networking: A Top-Down Approach 7th Edition ](https://www.ucg.ac.me/skladiste/blog_44233/objava_64433/fajlovi/Computer%20Networking%20_%20A%20Top%20Down%20Approach,%207th,%20converted.pdf)
--[Computer Networks: A Systems Approach](https://book.systemsapproach.org/)
+- [Computer Networking: A Top-Down Approach 7th Edition ](https://www.ucg.ac.me/skladiste/blog_44233/objava_64433/fajlovi/Computer%20Networking%20_%20A%20Top%20Down%20Approach,%207th,%20converted.pdf).
 
--[CS 168 Textbook](https://textbook.cs168.io/intro/intro.html)
+- [Computer Networks: A Systems Approach](https://book.systemsapproach.org/).
 
--[networking-practical](https://www.youtube.com/playlist?list=PLowKtXNTBypH19whXTVoG3oKSuOcw_XeW)
+- [CS 168 Textbook](https://textbook.cs168.io/intro/intro.html).
 
--[An Introduction to Computer Networks](https://intronetworks.cs.luc.edu/current/ComputerNetworks.pdf)
+- [networking-practical](https://www.youtube.com/playlist?list=PLowKtXNTBypH19whXTVoG3oKSuOcw_XeW).
+
+- [An Introduction to Computer Networks](https://intronetworks.cs.luc.edu/current/ComputerNetworks.pdf).
 
 ### Links
--[cs-168-spring-2025](https://sp25.cs168.io/) \
--[The TCP/IP Guide](http://www.tcpipguide.com/free/t_toc.htm) \
--[Primer](https://hpbn.co/#toc)
+
+- [cs-168-spring-2025](https://sp25.cs168.io/).
+- [The TCP/IP Guide](http://www.tcpipguide.com/free/t_toc.htm).
+- [Primer](https://hpbn.co/#toc).
 
 ## Table of Contents :
  - [Prerequisites](#Prerequisites).
  - [what is Networking](#what-is-Networking).
      -[Protocols](#Protocols).
--[OSI](#OSI-Model)
--[The Internet Design Principles](#The Internet Design Principles)
+     -[A simple network](#A-simple-network)
+- [OSI](#OSI-Model).
+- [The Internet Design Principles](#The Internet Design Principles).
+- [Why These Models (we'll talk about tpc/ip later) Matter?](####Why These Models (we'll talk about-tpc/ip later) Matter?)
+    - [Decentralized control](#Decentralized-control)
+    - [Core Principles Overview](#Core Principles Overview)
+- [Detailed Breakdown of Mandatory Principles](#Detailed Breakdown of Mandatory Principles)
+    - [1.End-to-End Principle (e2ee)](#1.End-to-End Principle (e2ee)).
+    - [2.Circuit Switching](#2.Circuit Switching).
+    - [3.Packet Switching](#3.Packet Switching).
+    - [4.Connectionless Communication](#4.Connectionless Communication)
+    - [5.Layered Architecture](#5.Layered Architecture).
+    - [6.Best Effort Delivery](#6.Best Effort Delivery).
+    
+- [Recommended Principles for Robustness(speed)](#Recommended Principles for Robustness(speed)).
+    - [Comparison between Packet Switching and Circuit Switching:](#Comparison between Packet Switching and Circuit Switching:).
+    
+- [Bandwidth, Propagation Delay, Ensuring QOS:](#Bandwidth, Propagation Delay, Ensuring QOS:)
+    - [Badwidth](#Badwidth)
+    - [transmission delay](#transmission delay)
+    - [Propagation Delay](#Propagation Delay)
+    - [Hopping delay](#Hopping delay)
+- [Imp: What is a Queue in Networking:](#Imp: What is a Queue in Networking:)
+
+- [Bandwidth Allocation](#Bandwidth Allocation).
+    - [Static Allocation](#Static Allocation)
+    - [Dynamic Allocation](#Dynamic Allocation)
+        - [Bursty Traffic](#Bursty Traffic)
+    -[Resource Reservation](#Resource Reservation)
+    -[Network Efficiency](#Network Efficiency)
+    
+ - [Network congestion](#Network congestion)
+     - [Transient overload](#Transient overload)
+
+- [Routing principles overview](#Routing principles overview)
+    - [Routing principles](#Routing principles)
+    - [1. Path Determination:](#1. Path Determination:)
+    - [2. Routing Tables:](#2. Routing Tables:)
+    - [3. Routing Metrics:](#3. Routing Metrics:)
+    - [4. Types of Routing:](#4. Types of Routing:)
+    - [5. Routing Protocols:](#5. Routing Protocols:)
+    - [6. Packet Forwarding and Hopping:](#6. Packet Forwarding and Hopping:)
 
 
 ## Prerequisites
@@ -73,7 +114,6 @@ Before knowing what is netwroking we need to ask ourselves why do we need networ
 Computer networking has evolved dramatically over the past six decades, transforming from simple time-sharing systems to the complex global infrastructure we know today. Let's explore this journey chronologically.
 
 ### Pre-Networking Era (1950s)
-
 The earliest precursor to computer networking emerged in the 1950s with [time-sharing systems](https://cdn.shopify.com/s/files/1/0106/6339/5391/files/1024x576-1_28d3d765-4fdf-4bef-b1e6-3fc59eb18ed9_1024x1024.jpg?v=1675328680). These systems allowed multiple terminals to share computing resources simultaneously, though they couldn't communicate directly with each other. Each terminal consisted of a monitor and keyboard connected to a central computer through controlling routes.
 
 ### Early Networking (1960s)
@@ -110,6 +150,8 @@ Recent developments have focused on speed and accessibility:
 ## Future
 
 Modern networking continues to evolve rapidly, driven by increasing demands for higher speeds, lower latency, and greater connectivity.
+
+![future](/home/knix/Pictures/Screenshots/Future of networking.png)
 
 ### Core Technologies Driving Future Networks
 
@@ -214,6 +256,7 @@ The Internet is all about designing protocols.
 `protocol` means set of rules, conventions and guidelines for exchanging data.
 
 Designing a good protocol is harder than it first seems!
+
     [David D. Clark](https://en.wikipedia.org/wiki/David_D._Clark) was the chief protocol architect for the Internet
     in the 1980s.
 ```
@@ -334,7 +377,7 @@ The Internet Design Principles can be grouped into two main categories: mandator
 - Why It Matters: Enables scalable network operation and efficient resource usage
 - Real Example: When streaming video, your content is broken into small packets that travel independently
 
-#### 4.Connectionless Communication  
+#### 4.Connectionless Communication
 - Definition: Each packet finds its own path independently
 - Why It Matters: Ensures reliability and fault tolerance
 - Example: Even if one packet takes a different route, your message still arrives complete
@@ -344,7 +387,7 @@ The Internet Design Principles can be grouped into two main categories: mandator
 - Why It Matters: Enables independent development and updates of different parts
 - Example: Your browser can be updated without changing the underlying networking code
 
-#### 6. Best Effort Delivery
+#### 6.Best Effort Delivery
   - Definition: Network attempts delivery without guarantees
   - Why It Matters: Balances efficiency with reliability
   - Real Example: Email servers try to deliver mail but won't crash if delivery fails
@@ -353,29 +396,29 @@ The Internet Design Principles can be grouped into two main categories: mandator
 ### Recommended Principles for Robustness(speed)
 
 1. Open Architecture
-- Definition: Designs should allow future modifications
-- Benefits: Enables evolution and adaptation
-- Example: New protocols can be added without breaking existing ones
+    - Definition: Designs should allow future modifications
+    - Benefits: Enables evolution and adaptation
+    - Example: New protocols can be added without breaking existing ones
 
 2. Robustness Principle
-- Definition: Be conservative in sending, liberal in receiving
-- Benefits: Ensures interoperability across implementations
-- Example: Web browsers accept various formats of HTML even if not perfectly formatted
+    - Definition: Be conservative in sending, liberal in receiving
+    - Benefits: Ensures interoperability across implementations
+    - Example: Web browsers accept various formats of HTML even if not perfectly formatted
 
 3. Distribution
-- Definition: Resources spread across multiple nodes
-- Benefits: Improves efficiency and reliability
-- Example: Content delivery networks store copies of content near users
+    - Definition: Resources spread across multiple nodes
+    - Benefits: Improves efficiency and reliability
+    - Example: Content delivery networks store copies of content near users
 
 4. Scalability 
-- Definition: Systems designed to handle growth
-- Benefits: Supports increasing usage and demands
-- Example: Cloud services automatically add more resources during high demand
+    - Definition: Systems designed to handle growth
+    - Benefits: Supports increasing usage and demands
+    - Example: Cloud services automatically add more resources during high demand
 
 5. Transparency
-- Definition: Complexity hidden from users
-- Benefits: Improves usability and maintenance
-- Example: Users don't need to understand routing protocols to send emails
+    - Definition: Complexity hidden from users
+    - Benefits: Improves usability and maintenance
+    - Example: Users don't need to understand routing protocols to send emails
 
 #### Comparison between Packet Switching and Circuit Switching:
 
@@ -443,7 +486,7 @@ A queue in networking is a data structure or buffer used to temporarily hold dat
 
 Packet delay = Transmission delay + propagation delay + Queing delay
 
-
+### Bandwidth Allocation
 Static allocation and dynamic allocation in networking most commonly refer to how network resources—especially IP addresses—are assigned to devices.Now we will talk about it both:
 
 #### Static Allocation
@@ -504,7 +547,7 @@ now let's talk about some Key Features and Benefits:
 #### Network Efficiency
 Network efficiency refers to how effectively a network achieves its goals of fast, reliable communication and smooth data transfer with minimal resource waste or downtime. There are 6 common terms we've to ensure to build an efficient networking infustructure:
 
-```
+
 1. Throughput: The actual rate at which data is successfully transferred across the network. High throughput means    the network can move large amounts of data efficiently. Example: A video streaming service like Netflix measures throughput by how many megabits per second (Mbps) of video data are successfully delivered to viewers. If a user can stream a 4K video without buffering, the network is achieving high throughput, efficiently moving large data volumes to the end user.
 
 2. Bandwidth Utilization: Measures how much of the available bandwidth is being used. Efficient networks maximize usage without causing congestion or overloading links. Example: A corporate network has a 1 Gbps internet link. During peak business hours, network monitoring tools show that average usage is around 800 Mbps, meaning 80% of the available bandwidth is being used. This indicates efficient bandwidth utilization, as the link is neither underused nor overloaded, avoiding congestion and maximizing value from the investment.
@@ -519,7 +562,6 @@ medium.Technologies like forward error correction (FEC) help maintain high throu
 6. Resource Consumption: Efficient use of CPU, memory, and other network resources to prevent bottlenecks and ensure smooth operation. Example: A data center optimizes its server workload so that CPU and memory usage are balanced across all machines what we call the load balancer. By preventing any single server from becoming a bottleneck, the network can handle more simultaneous connections and data transfers smoothly, improving overall efficiency. So as a 
 great engineer we have to design Horizontal and Vertical Scaling to distribute loads evenly.
 
-```
 #### Network congestion
 Network congestion occurs when the volume of data traffic exceeds the network’s capacity to handle it efficiently. This typically happens when too many data packets are sent through a network node or link at the same time, overwhelming available bandwidth and resources. As a result, the network experiences degraded performance, including increased latency (delays), packet loss, jitter (variability in packet arrival times), and reduced throughput (overall data transfer rate). In one sentence - you don't have enough bandwidth .Let's imagine a scenario and try to understand it in a better way.
 
@@ -559,7 +601,7 @@ BTW there are 2 Types of Transient Overload:
 we've come a long way, yay!!! now we will talk about Routing principles and how packets are being send through.
 
 
-#### Routing principles
+#### Routing principles overview
 Before explaining routing and routers I'd like to explain how data packets are send over the wires or a medium.
 
 ```
@@ -617,6 +659,7 @@ Exterior Gateway Protocols (EGPs): Manage routing between different autonomous s
 6. Packet Forwarding and Hopping:
 When a data packet is sent, routers forward it hop-by-hop through intermediate nodes until it reaches the destination. The packet header contains the destination address, and each router uses its routing table to determine the next hop
 
-continue....
+
 
 [Back to top](#top) [:arrow_up:](#top)
+
