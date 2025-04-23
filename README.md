@@ -32,22 +32,23 @@ Hi, I'm Mysthological, network engineer embarking on a journey to master network
 - [SSH](https://cryptsus.com/blog/how-to-secure-your-ssh-server-with-public-key-elliptic-curve-ed25519-crypto.html)
 
 ## Table of Contents :
- - [Prerequisites](#Prerequisites).
- - [what is Networking](#what-is-Networking).
-     -[Protocols](#Protocols).
-     -[A simple network](#A-simple-network)
-- [OSI](#OSI-Model).
-- [The Internet Design Principles](#The-Internet-Design-Principles).
+
+- [Prerequisites](#Prerequisites)
+- [what is Networking](#what-is-Networking)
+    - [Protocols](#Protocols)
+    
+- [OSI](#OSI-Model)
+- [The Internet Design Principles](#The-Internet-Design-Principles)
 - [Why These Models (we'll talk about tpc/ip later) Matter?](####Why-These-Models-(we'll-talk-about-tpc/ip-later)-Matter?)
     - [Decentralized control](#Decentralized-control)
     - [Core Principles Overview](#Core-Principles-Overview)
 - [Detailed Breakdown of Mandatory Principles](#Detailed-Breakdown-of-Mandatory-Principles)
-    - [1.End-to-End Principle (e2ee)](#1.End-to-End-Principle-(e2ee)).
-    - [2.Circuit Switching](#2.Circuit-Switching).
-    - [3.Packet Switching](#3.Packet-Switching).
+    - [1.End-to-End Principle (e2ee)](#1.End-to-End-Principle-(e2ee))
+    - [2.Circuit Switching](#2.Circuit-Switching)
+    - [3.Packet Switching](#3.Packet-Switching)
     - [4.Connectionless Communication](#4.Connectionless-Communication)
-    - [5.Layered Architecture](#5.Layered-Architecture).
-    - [6.Best Effort Delivery](#6.Best-Effort-Delivery).
+    - [5.Layered Architecture](#5.Layered-Architecture)
+    - [6.Best Effort Delivery](#6.Best-Effort-Delivery)
     
 - [Recommended Principles for Robustness (speed)](#recommended-principles-for-robustness-speed)
 - [Comparison between Packet Switching and Circuit Switching](#comparison-between-packet-switching-and-circuit-switching)
@@ -630,31 +631,31 @@ do we really get the idea what router did? It just routed our package to the sen
 Routing in networking is the process of selecting paths in a network along which data packets travel from a source to a destination. The core principles of routing involve determining the optimal path, forwarding packets, and maintaining routing information dynamically or statically to ensure efficient data delivery. Well, there are 6 
 mandatory routing principles:
 
-1. Path Determination:
+##### 1. Path Determination:
 Routing algorithms calculate the best possible path for data packets to travel across the network. This involves evaluating multiple possible routes and selecting the optimal one based on specific metrics such as hop count, bandwidth, delay, or cost.
 
-2. Routing Tables:
+##### 2. Routing Tables:
 Routers maintain routing tables, which are data structures containing information about network destinations and the next hop to reach them. These tables are updated either manually (static routing) or automatically (dynamic routing) to reflect the current network topology and conditions.
 
-3. Routing Metrics:
+##### 3. Routing Metrics:
 Routing decisions rely on metrics to assess the desirability of a route. Common metrics include:
 - Hop count (number of intermediate routers).
 - Bandwidth (capacity of the link).
 - Delay (time taken for data to traverse the path).
 - Cost (an abstract value representing route preference).
 
-4. Types of Routing:
+##### 4. Types of Routing:
 Static Routing: Routes are manually configured by network administrators. It offers fine control but lacks scalability and adaptability to network changes.
 
 Dynamic Routing: Routers automatically discover and maintain routes using routing protocols that adapt to network topology changes and traffic conditions. This improves flexibility and fault tolerance.
 
-5. Routing Protocols:
+##### 5. Routing Protocols:
 Routing protocols define rules for routers to communicate routing information and update routing tables. They can be categorized as:
 Interior Gateway Protocols (IGPs): Operate within a single autonomous system (AS), e.g., RIP, OSPF, EIGRP.
 
 Exterior Gateway Protocols (EGPs): Manage routing between different autonomous systems, e.g., BGP.
 
-6. Packet Forwarding and Hopping:
+##### 6. Packet Forwarding and Hopping:
 When a data packet is sent, routers forward it hop-by-hop through intermediate nodes until it reaches the destination. The packet header contains the destination address, and each router uses its routing table to determine the next hop
 
 
