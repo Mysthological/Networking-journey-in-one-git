@@ -29,6 +29,7 @@ Hi, I'm Mysthological, network engineer embarking on a journey to master network
 - [cs-168-spring-2025](https://sp25.cs168.io/).
 - [The TCP/IP Guide](http://www.tcpipguide.com/free/t_toc.htm).
 - [Primer](https://hpbn.co/#toc).
+- [SSH](https://cryptsus.com/blog/how-to-secure-your-ssh-server-with-public-key-elliptic-curve-ed25519-crypto.html)
 
 ## Table of Contents :
  - [Prerequisites](#Prerequisites).
@@ -36,46 +37,43 @@ Hi, I'm Mysthological, network engineer embarking on a journey to master network
      -[Protocols](#Protocols).
      -[A simple network](#A-simple-network)
 - [OSI](#OSI-Model).
-- [The Internet Design Principles](#The Internet Design Principles).
-- [Why These Models (we'll talk about tpc/ip later) Matter?](####Why These Models (we'll talk about-tpc/ip later) Matter?)
+- [The Internet Design Principles](#The-Internet-Design-Principles).
+- [Why These Models (we'll talk about tpc/ip later) Matter?](####Why-These-Models-(we'll-talk-about-tpc/ip-later)-Matter?)
     - [Decentralized control](#Decentralized-control)
-    - [Core Principles Overview](#Core Principles Overview)
-- [Detailed Breakdown of Mandatory Principles](#Detailed Breakdown of Mandatory Principles)
-    - [1.End-to-End Principle (e2ee)](#1.End-to-End Principle (e2ee)).
-    - [2.Circuit Switching](#2.Circuit Switching).
-    - [3.Packet Switching](#3.Packet Switching).
-    - [4.Connectionless Communication](#4.Connectionless Communication)
-    - [5.Layered Architecture](#5.Layered Architecture).
-    - [6.Best Effort Delivery](#6.Best Effort Delivery).
+    - [Core Principles Overview](#Core-Principles-Overview)
+- [Detailed Breakdown of Mandatory Principles](#Detailed-Breakdown-of-Mandatory-Principles)
+    - [1.End-to-End Principle (e2ee)](#1.End-to-End-Principle-(e2ee)).
+    - [2.Circuit Switching](#2.Circuit-Switching).
+    - [3.Packet Switching](#3.Packet-Switching).
+    - [4.Connectionless Communication](#4.Connectionless-Communication)
+    - [5.Layered Architecture](#5.Layered-Architecture).
+    - [6.Best Effort Delivery](#6.Best-Effort-Delivery).
     
-- [Recommended Principles for Robustness(speed)](#Recommended Principles for Robustness(speed)).
-    - [Comparison between Packet Switching and Circuit Switching:](#Comparison between Packet Switching and Circuit Switching:).
-    
-- [Bandwidth, Propagation Delay, Ensuring QOS:](#Bandwidth, Propagation Delay, Ensuring QOS:)
-    - [Badwidth](#Badwidth)
-    - [transmission delay](#transmission delay)
-    - [Propagation Delay](#Propagation Delay)
-    - [Hopping delay](#Hopping delay)
-- [Imp: What is a Queue in Networking:](#Imp: What is a Queue in Networking:)
+- [Recommended Principles for Robustness (speed)](#recommended-principles-for-robustness-speed)
+- [Comparison between Packet Switching and Circuit Switching](#comparison-between-packet-switching-and-circuit-switching)
+- [Bandwidth, Propagation Delay, Ensuring QOS](#bandwidth-propagation-delay-ensuring-qos)
+    - [Bandwidth](#bandwidth)
+    - [Transmission Delay](#transmission-delay)
+    - [Propagation Delay](#propagation-delay)
+    - [Hopping Delay](#hopping-delay)
+- [Imp: What is a Queue in Networking](#imp-what-is-a-queue-in-networking)
+- [Bandwidth Allocation](#bandwidth-allocation)
+    - [Static Allocation](#static-allocation)
+    - [Dynamic Allocation](#dynamic-allocation)
+    - [Bursty Traffic](#bursty-traffic)
+- [Resource Reservation](#resource-reservation)
+- [Network Efficiency](#network-efficiency)
+- [Network Congestion](#network-congestion)
+    - [Transient Overload](#transient-overload)
+- [Routing Principles Overview](#routing-principles-overview)
+    - [Routing Principles](#routing-principles)
+    - [1. Path Determination](#1-path-determination)
+    - [2. Routing Tables](#2-routing-tables)
+    - [3. Routing Metrics](#3-routing-metrics)
+    - [4. Types of Routing](#4-types-of-routing)
+    - [5. Routing Protocols](#5-routing-protocols)
+    - [6. Packet Forwarding and Hopping](#6-packet-forwarding-and-hopping)
 
-- [Bandwidth Allocation](#Bandwidth Allocation).
-    - [Static Allocation](#Static Allocation)
-    - [Dynamic Allocation](#Dynamic Allocation)
-        - [Bursty Traffic](#Bursty Traffic)
-    -[Resource Reservation](#Resource Reservation)
-    -[Network Efficiency](#Network Efficiency)
-    
- - [Network congestion](#Network congestion)
-     - [Transient overload](#Transient overload)
-
-- [Routing principles overview](#Routing principles overview)
-    - [Routing principles](#Routing principles)
-    - [1. Path Determination:](#1. Path Determination:)
-    - [2. Routing Tables:](#2. Routing Tables:)
-    - [3. Routing Metrics:](#3. Routing Metrics:)
-    - [4. Types of Routing:](#4. Types of Routing:)
-    - [5. Routing Protocols:](#5. Routing Protocols:)
-    - [6. Packet Forwarding and Hopping:](#6. Packet Forwarding and Hopping:)
 
 
 ## Prerequisites
@@ -436,11 +434,11 @@ These principles work together to create a robust, scalable, and adaptable globa
 
 Bandwidth and propagation delay are two fundamental concepts in computer networking that together influence the total time it takes for data to travel from sender to receiver.
 
-#### Badwidth
+#### Bandwidth
 Bandwidth is the maximum rate at which data can be transmitted over a network link, typically measured in bits per second (bps). Whenever we downolad something over the internet for example like downloading games on steam we can see 
 it's in bytes not bits. 8 bits = 1byte.
 
-####  transmission delay
+#### transmission delay
 The transmission delay (sometimes called bandwidth delay) is the time required to push all the packet’s bits onto the wire. It depends on the packet size and the bandwidth of the link. well, there is a formula to calculate  transmission delay.
 ```
 Transmission delay = Packet size (bits) / Bandwidth (bps)
