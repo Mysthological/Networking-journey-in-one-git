@@ -1,0 +1,101 @@
+site_name: Networking-journey-in-one-git
+site_url: https://github.com/Mysthological/Networking-journey-in-one-git
+
+nav:
+  - Basics: 'index.md'
+
+theme:
+  logo: assets/favicon-32x32.png
+  favicon: assets/favicon-16x16.png
+  name: material
+  features:
+    - navigation.sections
+    - navigation.tabs
+    - navigation.expand
+    - navigation.path
+    - navigation.indexes
+#    - navigation.tabs.sticky
+    - toc.follow
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
+    - header.autohide
+    - navigation.footer
+    - content.action.edit
+    - content.code.copy
+    - content.code.select
+  language: en
+
+
+  plugins:
+  - search:
+      enabled: true
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+      lang: en
+  - tags:
+      enabled: true
+      tags: true
+
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+      primary: deep purple
+      accent: red
+    - scheme: slate #dark-mode
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+      primary: lime
+      accent: teal
+
+
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/Mysthological
+
+  version:
+    provider: Mysthological
+    default: stable
+  status:
+    new: recently added
+    depreceated: old
+  generator: 0
+
+markdown_extensions:
+  - abbr
+  - attr_list
+  - admonition
+  - md_in_html
+  - footnotes
+  - smarty
+  - markdown.extensions.wikilinks
+  - pymdownx.caret # for superscript in md: H~2~O or A^T^A
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.critic
+  - pymdownx.keys
+  - pymdownx.blocks.caption
+  - pymdownx.superfences
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      linenums_style: pymdownx-inline
+      line_spans: __span
+      use_pygments: true
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+
+copyright: |
+  &copy; 2023 <a href="https://github.com/Mysthological"  target="_blank" rel="noopener">Mysthological</a>
+
