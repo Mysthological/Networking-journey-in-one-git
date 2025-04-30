@@ -1,5 +1,4 @@
 name: ci
-
 on:
   push:
     branches:
@@ -51,3 +50,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+      - run: pip install mkdocs-material
+      - run: mkdocs gh-deploy --force
