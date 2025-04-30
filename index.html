@@ -1,0 +1,1817 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://github.com/Mysthological/Networking-journey-in-one-git/">
+      
+      
+      
+      
+      <link rel="icon" href="assets/favicon-16x16.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.10">
+    
+    
+      
+        <title>Networking-journey-in-one-git</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="Networking-journey-in-one-git" class="md-header__button md-logo" aria-label="Networking-journey-in-one-git" data-md-component="logo">
+      
+  <img src="assets/favicon-32x32.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Networking-journey-in-one-git
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Basics
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="red"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="lime" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Basics
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Networking-journey-in-one-git" class="md-nav__button md-logo" aria-label="Networking-journey-in-one-git" data-md-component="logo">
+      
+  <img src="assets/favicon-32x32.png" alt="logo">
+
+    </a>
+    Networking-journey-in-one-git
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Basics
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Basics
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Resources
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#books" class="md-nav__link">
+    <span class="md-ellipsis">
+      Books
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    <span class="md-ellipsis">
+      Links
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table of Contents :
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-networking-era-1950s" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pre-Networking Era (1950s)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#early-networking-1960s" class="md-nav__link">
+    <span class="md-ellipsis">
+      Early Networking (1960s)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Early Networking (1960s)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-modern-era-of-networking-began-during-the-cold-war-period-driven-by-military-necessity-key-developments-included" class="md-nav__link">
+    <span class="md-ellipsis">
+      The modern era of networking began during the Cold War period, driven by military necessity. Key developments included:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-expansion-1970s" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Expansion (1970s)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commercial-development-1980s-1990s" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commercial Development (1980s-1990s)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modern-era-late-1990s-present" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modern Era (Late 1990s-Present)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Future">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-technologies-driving-future-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Technologies Driving Future Networks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Technologies Driving Future Networks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5g-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      5G Networks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wi-fi-evolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wi-Fi Evolution
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quantum-networking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quantum Networking
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emerging-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Emerging Applications
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Emerging Applications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#internet-of-things-iot-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Internet of Things (IoT) Integration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloud-computing-evolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cloud Computing Evolution
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extended-reality-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extended Reality Networks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#infrastructure-evolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Infrastructure Evolution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Infrastructure Evolution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#software-defined-networking-sdn" class="md-nav__link">
+    <span class="md-ellipsis">
+      Software-Defined Networking (SDN)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edge-computing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Edge Computing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sd-wan-adoption" class="md-nav__link">
+    <span class="md-ellipsis">
+      SD-WAN Adoption
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#future-challenges-and-opportunities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future Challenges and Opportunities
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Future Challenges and Opportunities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#security-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Considerations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environmental-sustainability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environmental Sustainability
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#social-impact" class="md-nav__link">
+    <span class="md-ellipsis">
+      Social Impact
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-networking" class="md-nav__link">
+    <span class="md-ellipsis">
+      what is Networking
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="what is Networking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#protocols" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protocols
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#osi-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      OSI-Model
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OSI-Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-these-models-well-talk-about-tpcip-later-matter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why These Models (we&rsquo;ll talk about tpc/ip later) Matter?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-internet-design-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Internet Design Principles
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Internet Design Principles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decentralized-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decentralized control
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#core-principles-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Principles Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detailed-breakdown-of-mandatory-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detailed Breakdown of Mandatory Principles
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Detailed Breakdown of Mandatory Principles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1end-to-end-principle-e2ee" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.End-to-End Principle (e2ee)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2circuit-switching" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.Circuit Switching
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3packet-switching" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.Packet Switching
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4connectionless-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.Connectionless Communication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5layered-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.Layered Architecture
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6best-effort-delivery" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.Best Effort Delivery
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommended-principles-for-robustnessspeed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommended Principles for Robustness(speed)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Recommended Principles for Robustness(speed)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comparison-between-packet-switching-and-circuit-switching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparison between Packet Switching and Circuit Switching:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bandwidth-propagation-delay-ensuring-qos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bandwidth, Propagation Delay, Ensuring QOS:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bandwidth, Propagation Delay, Ensuring QOS:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bandwidth" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bandwidth
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transmission-delay" class="md-nav__link">
+    <span class="md-ellipsis">
+      transmission delay
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#propagation-delay" class="md-nav__link">
+    <span class="md-ellipsis">
+      Propagation Delay
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hopping-delay" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hopping delay
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hopping delay">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#imp-what-is-a-queue-in-networking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Imp: What is a Queue in Networking:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bandwidth-allocation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bandwidth Allocation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bandwidth Allocation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#static-allocation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Static Allocation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-allocation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dynamic Allocation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bursty-traffic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bursty Traffic
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-reservation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resource Reservation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-efficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Efficiency
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-congestion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network congestion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transient-overload" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transient overload
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#routing-principles-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Routing principles overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#routing-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Routing principles
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Routing principles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-path-determination" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Path Determination:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-routing-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Routing Tables:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-routing-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Routing Metrics:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-types-of-routing" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Types of Routing:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-routing-protocols" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Routing Protocols:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-packet-forwarding-and-hopping" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Packet Forwarding and Hopping:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Basics</h1>
+
+<p><a name="top"></a></p>
+<h2 id="introduction">Introduction</h2>
+<p>Hi, I&rsquo;m Mysthological, network engineer embarking on a journey to master network architecture and cybersecurity. I&rsquo;m excited to contribute to open-source projects, learn from the community, and share my own experiences throughout the years. Let&rsquo;s collaborate and build a stronger, more secure digital world together!. Most importantly, never take anything for granted.</p>
+<h2 id="additional-resources">Additional Resources</h2>
+<h3 id="books">Books</h3>
+<ul>
+<li>
+<p><a href="https://csc-knu.github.io/sys-prog/books/Andrew%20S.%20Tanenbaum%20-%20Computer%20Networks.pdf">Computer Networks - A Tanenbaum - 5<sup>th</sup> edition</a>.</p>
+</li>
+<li>
+<p><a href="https://www.emgywomenscollege.ac.in/templateEditor/kcfinder/upload/files/Network-security-essentials.pdf">Network Security Essentials: Applications and Standards</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/InspectorDidi/Hacking-Books/blob/master/Network%20Warrior%2C%202nd%20Edition.pdf">network warrior</a>.</p>
+</li>
+<li>
+<p><a href="https://gaia.cs.umass.edu/kurose_ross/lectures.php">Computer Networking: a Top-Down Approach (8<sup>th</sup> ed.)</a>.</p>
+</li>
+<li>
+<p><a href="https://www.ucg.ac.me/skladiste/blog_44233/objava_64433/fajlovi/Computer%20Networking%20_%20A%20Top%20Down%20Approach,%207th,%20converted.pdf">Computer Networking: A Top-Down Approach 7<sup>th</sup> Edition </a>.</p>
+</li>
+<li>
+<p><a href="https://book.systemsapproach.org/">Computer Networks: A Systems Approach</a>.</p>
+</li>
+<li>
+<p><a href="https://textbook.cs168.io/intro/intro.html">CS 168 Textbook</a>.</p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/playlist?list=PLowKtXNTBypH19whXTVoG3oKSuOcw_XeW">networking-practical</a>.</p>
+</li>
+<li>
+<p><a href="https://intronetworks.cs.luc.edu/current/ComputerNetworks.pdf">An Introduction to Computer Networks</a>.</p>
+</li>
+</ul>
+<h3 id="links">Links</h3>
+<ul>
+<li><a href="https://sp25.cs168.io/">cs-168-spring-2025</a>.</li>
+<li><a href="http://www.tcpipguide.com/free/t_toc.htm">The TCP/IP Guide</a>.</li>
+<li><a href="https://hpbn.co/#toc">Primer</a>.</li>
+<li><a href="https://cryptsus.com/blog/how-to-secure-your-ssh-server-with-public-key-elliptic-curve-ed25519-crypto.html">SSH</a></li>
+</ul>
+<h2 id="table-of-contents">Table of Contents :</h2>
+<ul>
+<li><a href="#Prerequisites">Prerequisites</a></li>
+<li>
+<p><a href="#what-is-Networking">what is Networking</a></p>
+<ul>
+<li><a href="#Protocols">Protocols</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#OSI-Model">OSI</a></p>
+</li>
+<li><a href="#The-Internet-Design-Principles">The Internet Design Principles</a></li>
+<li><a href="####Why-These-Models-(we'll-talk-about-tpc/ip-later)-Matter?">Why These Models (we&rsquo;ll talk about tpc/ip later) Matter?</a><ul>
+<li><a href="#Decentralized-control">Decentralized control</a></li>
+<li><a href="#Core-Principles-Overview">Core Principles Overview</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#Detailed-Breakdown-of-Mandatory-Principles">Detailed Breakdown of Mandatory Principles</a></p>
+<ul>
+<li><a href="#1.End-to-End-Principle-(e2ee)">1.End-to-End Principle (e2ee)</a></li>
+<li><a href="#2.Circuit-Switching">2.Circuit Switching</a></li>
+<li><a href="#3.Packet-Switching">3.Packet Switching</a></li>
+<li><a href="#4.Connectionless-Communication">4.Connectionless Communication</a></li>
+<li><a href="#5.Layered-Architecture">5.Layered Architecture</a></li>
+<li><a href="#6.Best-Effort-Delivery">6.Best Effort Delivery</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#recommended-principles-for-robustness-speed">Recommended Principles for Robustness (speed)</a></p>
+</li>
+<li><a href="#comparison-between-packet-switching-and-circuit-switching">Comparison between Packet Switching and Circuit Switching</a></li>
+<li><a href="#bandwidth-propagation-delay-ensuring-qos">Bandwidth, Propagation Delay, Ensuring QOS</a><ul>
+<li><a href="#bandwidth">Bandwidth</a></li>
+<li><a href="#transmission-delay">Transmission Delay</a></li>
+<li><a href="#propagation-delay">Propagation Delay</a></li>
+<li><a href="#hopping-delay">Hopping Delay</a></li>
+</ul>
+</li>
+<li><a href="#imp-what-is-a-queue-in-networking">Imp: What is a Queue in Networking</a></li>
+<li><a href="#bandwidth-allocation">Bandwidth Allocation</a><ul>
+<li><a href="#static-allocation">Static Allocation</a></li>
+<li><a href="#dynamic-allocation">Dynamic Allocation</a></li>
+<li><a href="#bursty-traffic">Bursty Traffic</a></li>
+</ul>
+</li>
+<li><a href="#resource-reservation">Resource Reservation</a></li>
+<li><a href="#network-efficiency">Network Efficiency</a></li>
+<li><a href="#network-congestion">Network Congestion</a><ul>
+<li><a href="#transient-overload">Transient Overload</a></li>
+</ul>
+</li>
+<li><a href="#routing-principles-overview">Routing Principles Overview</a><ul>
+<li><a href="#routing-principles">Routing Principles</a></li>
+<li><a href="#1-path-determination">1. Path Determination</a></li>
+<li><a href="#2-routing-tables">2. Routing Tables</a></li>
+<li><a href="#3-routing-metrics">3. Routing Metrics</a></li>
+<li><a href="#4-types-of-routing">4. Types of Routing</a></li>
+<li><a href="#5-routing-protocols">5. Routing Protocols</a></li>
+<li><a href="#6-packet-forwarding-and-hopping">6. Packet Forwarding and Hopping</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Before knowing what is netwroking we need to ask ourselves why do we need networking? As I told before do not take anything for granted but fortunately we took it for granted. And now here we&rsquo;re curious enough to deep dive into the history of networking. Let me give you a roadmap first to understand the past:</p>
+<p><div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    title Evolution of Computer Networking
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    section Pre-Networking Era
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>        1950s : Time-Sharing Systems emerge
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>              : Multiple terminals share computing resources
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    section Early Networking
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        1969 : ARPANET launched
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>             : First packet-switched network
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        1971 : First email sent over ARPANET
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    section Network Expansion
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        1973 : Ethernet invented
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>             : Operated at 2.94 Mbps
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        1977 : TCP/IP developed
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>             : Enables network intercommunication
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>        1983 : TCP/IP replaces NCP
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>             : Modern Internet foundation established
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    section Commercial Development
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>        1989 : ARPANET decommissioned
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>             : NSFNET becomes backbone
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>        1990 : First commercial ISP launched
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>             : Internet opens to public
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>        1991 : World Wide Web released
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>             : Mass adoption begins
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>    section Modern Era
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>        1997 : Wi-Fi introduced
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>             : Wireless networking emerges
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>        1999 : Gigabit Ethernet
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>             : High-speed networking standard
+</span></code></pre></div>
+Computer networking has evolved dramatically over the past six decades, transforming from simple time-sharing systems to the complex global infrastructure we know today. Let&rsquo;s explore this journey chronologically.</p>
+<h3 id="pre-networking-era-1950s">Pre-Networking Era (1950s)</h3>
+<p>The earliest precursor to computer networking emerged in the 1950s with <a href="https://cdn.shopify.com/s/files/1/0106/6339/5391/files/1024x576-1_28d3d765-4fdf-4bef-b1e6-3fc59eb18ed9_1024x1024.jpg?v=1675328680">time-sharing systems</a>. These systems allowed multiple terminals to share computing resources simultaneously, though they couldn&rsquo;t communicate directly with each other. Each terminal consisted of a monitor and keyboard connected to a central computer through controlling routes.</p>
+<h3 id="early-networking-1960s">Early Networking (1960s)</h3>
+<h4 id="the-modern-era-of-networking-began-during-the-cold-war-period-driven-by-military-necessity-key-developments-included">The modern era of networking began during the Cold War period, driven by military necessity. Key developments included:</h4>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Paul_Baran">Paul Baran</a> and <a href="https://en.wikipedia.org/wiki/Donald_Davies">Donald Davies</a> independently proposed <a href="https://en.wikipedia.org/wiki/Packet_switching">packet-switching technology</a>, where data would be broken into packets and transmitted efficiently through networks.</li>
+<li>ARPANET was conceived as the first practical implementation of packet-switching, becoming the foundation of modern Internet infrastructure.</li>
+<li>The Network Control Protocol (NCP) was developed as ARPANET&rsquo;s first transport protocol.</li>
+</ul>
+<h3 id="network-expansion-1970s">Network Expansion (1970s)</h3>
+<p>Several significant advances marked this decade:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Robert_Metcalfe">Robert Metcalfe</a> invented Ethernet at <a href="https://spectrum.ieee.org/xerox-parc">Xerox PARC</a> in 1973, initially operating at 2.94 Mbps.</li>
+<li>TCP/IP was developed in 1977, enabling different networks to communicate with each other.</li>
+<li>Satellite links connected international computers to ARPANET, marking its global expansion.</li>
+</ul>
+<h3 id="commercial-development-1980s-1990s">Commercial Development (1980s-1990s)</h3>
+<p>This period saw the transition from academic to commercial networks:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/ARPANET">ARPANET</a> was decommissioned in 1989, replaced by <a href="https://icannwiki.org/National_Science_Foundation_Network">NSFNET</a> as the Internet backbone.</li>
+<li>&ldquo;The World&rdquo; became the first commercial ISP founded by Joel Furr in 1989. </li>
+<li>The World Wide Web invented by  <a href="https://en.wikipedia.org/wiki/Tim_Berners-Lee">Tim Berners-Lee</a> while at CERN in 1989, released in 1991 revolutionized public access to Internet resources.</li>
+</ul>
+<h3 id="modern-era-late-1990s-present">Modern Era (Late 1990s-Present)</h3>
+<p>Recent developments have focused on speed and accessibility:</p>
+<ul>
+<li>Wi-Fi emerged in 1997, enabling wireless connectivity.</li>
+<li>Gigabit Ethernet was introduced in 1999, providing high-speed networking capabilities.</li>
+<li>Modern networks support emerging technologies like 5G, Wi-Fi 6, cloud computing, and IoT devices.</li>
+</ul>
+<h2 id="future">Future</h2>
+<p>Modern networking continues to evolve rapidly, driven by increasing demands for higher speeds, lower latency, and greater connectivity.</p>
+<p><img alt="future" src="/home/knix/Pictures/Screenshots/Future of networking.png" /></p>
+<h3 id="core-technologies-driving-future-networks">Core Technologies Driving Future Networks</h3>
+<h4 id="5g-networks">5G Networks</h4>
+<ul>
+<li>Ultra-low latency (as low as 1ms) enabling real-time applications</li>
+<li>Massive machine-type communications supporting billions of IoT devices</li>
+<li>Enhanced mobile broadband for widespread high-speed connectivity</li>
+<li>Network slicing for customized performance and security profiles</li>
+</ul>
+<h4 id="wi-fi-evolution">Wi-Fi Evolution</h4>
+<ul>
+<li>Wi-Fi 6 and Wi-Fi 7 bringing unprecedented speeds and capacity</li>
+<li>Improved performance in dense environments</li>
+<li>Enhanced security features and power efficiency</li>
+<li>Better integration with cellular networks</li>
+</ul>
+<h4 id="quantum-networking">Quantum Networking</h4>
+<ul>
+<li>Development of quantum-resistant cryptography</li>
+<li>Secure quantum key distribution networks</li>
+<li>New security paradigms for sensitive data transmission</li>
+<li>Early adoption in financial and government sectors</li>
+</ul>
+<h3 id="emerging-applications">Emerging Applications</h3>
+<h4 id="internet-of-things-iot-integration">Internet of Things (IoT) Integration</h4>
+<ul>
+<li>Smart cities infrastructure</li>
+<li>Industrial automation and manufacturing</li>
+<li>Healthcare and medical devices</li>
+<li>Home automation and consumer electronics</li>
+</ul>
+<h4 id="cloud-computing-evolution">Cloud Computing Evolution</h4>
+<ul>
+<li>Edge computing reducing latency</li>
+<li>Distributed cloud architectures</li>
+<li>Hybrid cloud environments</li>
+<li>Serverless computing models</li>
+</ul>
+<h4 id="extended-reality-networks">Extended Reality Networks</h4>
+<ul>
+<li>AR/VR/MR infrastructure</li>
+<li>Immersive entertainment platforms</li>
+<li>Remote presence applications</li>
+<li>Virtual training environments</li>
+</ul>
+<h3 id="infrastructure-evolution">Infrastructure Evolution</h3>
+<h4 id="software-defined-networking-sdn">Software-Defined Networking (SDN)</h4>
+<ul>
+<li>Programmable network architecture</li>
+<li>Centralized management and control</li>
+<li>Dynamic traffic routing</li>
+<li>Enhanced security controls</li>
+</ul>
+<h4 id="edge-computing">Edge Computing</h4>
+<ul>
+<li>Reduced latency through local processing</li>
+<li>Improved real-time application performance</li>
+<li>Enhanced privacy and security</li>
+<li>Better support for IoT devices</li>
+</ul>
+<h4 id="sd-wan-adoption">SD-WAN Adoption</h4>
+<ul>
+<li>Application-aware routing</li>
+<li>Optimized WAN performance</li>
+<li>Simplified branch networking</li>
+<li>Cost-effective connectivity solutions</li>
+</ul>
+<h3 id="future-challenges-and-opportunities">Future Challenges and Opportunities</h3>
+<h4 id="security-considerations">Security Considerations</h4>
+<ul>
+<li>Zero-trust architecture adoption</li>
+<li>AI-powered threat detection</li>
+<li>Quantum computing impact on encryption</li>
+<li>IoT device security</li>
+</ul>
+<h4 id="environmental-sustainability">Environmental Sustainability</h4>
+<ul>
+<li>Energy-efficient networking equipment</li>
+<li>Reduced carbon footprint</li>
+<li>Green networking protocols</li>
+<li>Sustainable infrastructure design</li>
+</ul>
+<h4 id="social-impact">Social Impact</h4>
+<ul>
+<li>Digital divide reduction</li>
+<li>Universal connectivity initiatives</li>
+<li>Remote work infrastructure</li>
+<li>Education and healthcare accessibility</li>
+</ul>
+<p>The future of networking represents a complex interplay between technological advancement, societal needs, and environmental responsibility.But personally I think It&rsquo;ll lead us to absolute chaos.</p>
+<h2 id="what-is-networking">what is Networking</h2>
+<p>In simple term, Networking is connecting devices(nodes) together to share resources and exchange information(data/packets).Think of networking like a postal service for digital information - just as letters move between addresses, networks allow data to flow between connected nodes.<code>But you may ask, how the heck two devices talk to each other? don't they have any common language? BTW! don't forget to ensure privacy? what if someone's been peeking into their conversation?</code> well, that&rsquo;s why need to have some kind of rules and that&rsquo;s what we call protocols.</p>
+<h4 id="protocols">Protocols</h4>
+<p>The Internet is all about designing protocols.
+<code>protocol</code> means set of rules, conventions and guidelines for exchanging data.</p>
+<p>Designing a good protocol is harder than it first seems!</p>
+<div class="highlight"><pre><span></span><code>[David D. Clark](https://en.wikipedia.org/wiki/David_D._Clark) was the chief protocol architect for the Internet
+in the 1980s.
+</code></pre></div>
+<p><code>We reject: kings, presidents, and voting. We believe in: rough consensus and running code.
+— David D. Clark (1992)</code></p>
+<ul>
+<li>
+<p><a href="https://web.mit.edu/saltzer/www/publications/endtoend/endtoend.pdf">End-to-End Arguments in System Design (1981)</a></p>
+</li>
+<li>
+<p><a href="http://ccr.sigcomm.org/archive/1995/jan95/ccr-9501-clark.pdf">&ldquo;The Design Philosophy of the DARPA Internet Protocols&rdquo; (1988)</a></p>
+</li>
+</ul>
+<h2 id="osi-model">OSI-Model</h2>
+<p>The OSI (Open Systems Interconnection) model is a conceptual framework that helps us understand how data travels through a network. The OSI model was developed by the International Organization for Standardization (ISO) in the late 1970s and published in 1984.Think of it as a layered cake where each layer handles a specific task in the communication process.</p>
+<p><div class="highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>        Presentation Layer
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>        • Data Formatting
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>        • Encryption/decryption
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>        • Compression/decompressing
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>        Session Layer
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>        • Connection Control
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>        • Dialog Management
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>        Transport Layer
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>        • Error Detection
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>        • Port Numbers
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>        • Flow Control
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>        Network Layer
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>        • Routing
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>        • Logical Addressing
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>        • Path Selection
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>        Data Link Layer
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>        • Frame Creation
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>        • MAC(Media Access Control Address) Addresses
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>        • Error Checking
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>        Physical Layer
+</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>        • Cable/Wireless
+</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>        • Voltage/Signals
+</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>        • Network Topology
+</span></code></pre></div>
+<img alt="OSI-MODEL" src="https://151060567.v2.pressablecdn.com/wp-content/uploads/2024/01/the-7-layers-of-the-OSI-model.png" /></p>
+<h4 id="why-these-models-well-talk-about-tpcip-later-matter">Why These Models (we&rsquo;ll talk about tpc/ip later) Matter?</h4>
+<p>By dividing network communication into these layers, the models make it easier to:</p>
+<ul>
+<li>Design and build networks, since each layer handles a specific part of the process.</li>
+<li>Troubleshoot problems, because you can pinpoint which layer is causing an issue.</li>
+<li>Understand how different devices and applications can work together, even if they come from different               manufacturers</li>
+</ul>
+<p>We will start undestanding from lower layer first cause it all started form exchanging signals.</p>
+<p>1.Physical Layer (Layer 1)- Converts digital data into electrical signals
+- Transmits across network cables or wireless medium
+- Handles actual transmission medium</p>
+<p>2.Data Link Layer (Layer 2)- Creates frames with MAC addresses
+- Adds error-checking information
+- Manages physical addressing</p>
+<p>3.Network Layer (Layer 3)- Adds routing information
+- Uses IP addresses to determine the path
+- Ensures packets reach the correct destination</p>
+<p>4.Transport Layer (Layer 4)- Breaks the email into smaller packets
+- Assigns port numbers (like Port 25 for SMTP)
+- Ensures reliable delivery</p>
+<p>5.Session Layer (Layer 5)- Establishes connection with the mail server
+- Manages the dialogue between systems
+- Controls how long the session stays open</p>
+<p>6.Presentation Layer (Layer 6)- Encrypts sensitive information
+- Compresses the email content
+- Formats attachments properly</p>
+<p>7.Application Layer (Layer 7)- You compose an email in Gmail
+- The application layer handles the interface and formatting
+- Converts your typed message into digital format</p>
+<h3 id="the-internet-design-principles">The Internet Design Principles</h3>
+<p>Let&rsquo;s explore the Internet Design Principles through clear explanations and visual representations. These principles form the foundation of how the internet works and why it&rsquo;s so successful.</p>
+<h4 id="decentralized-control">Decentralized control</h4>
+<p>Internet is not governed by a single entity but is a distributed system where each network node operates independently, communicating with its neighbors.</p>
+<ul>
+<li>Each network device (e.g. router) runs on its own. No central mastermind.</li>
+<li>Alternative: SDN (Software-Defined Networking) centralizes control for performance.</li>
+<li>Alternative: DSDN (Distributed SDN) moves back toward decentralization again!</li>
+</ul>
+<h3 id="core-principles-overview">Core Principles Overview</h3>
+<p>The Internet Design Principles can be grouped into two main categories: mandatory principles that must be followed for basic functionality, and recommended principles that enhance robustness and future-proofing.</p>
+<h3 id="detailed-breakdown-of-mandatory-principles">Detailed Breakdown of Mandatory Principles</h3>
+<h4 id="1end-to-end-principle-e2ee">1.End-to-End Principle (e2ee)</h4>
+<ul>
+<li>Definition: Intelligence resides at the endpoints of communication, while the network core handles basic transmission.</li>
+<li>Why It Matters: Prevents network fragility and ensures robustness.</li>
+<li>Example: When you send an email, error checking happens at your device and the recipient&rsquo;s device, not in the middle.</li>
+</ul>
+<h4 id="2circuit-switching">2.Circuit Switching</h4>
+<ul>
+<li>
+<p>Definition: A dedicated path is created through multiple switching routers and connect to end point.</p>
+</li>
+<li>
+<p>Why It Matters: Provides consistent bandwidth and minimal latency throughout the connection.  circuit switching remains vital for applications requiring guaranteed bandwidth, low latency, and high  reliability but it&rsquo;s 10x expensive than Packet Switching. </p>
+</li>
+<li>
+<p>Real Example: When you&rsquo;re watching a live sports event online through a dedicated streaming service, circuit switching principles create a temporary dedicated connection between your device and the streaming server, ensuring smooth, uninterrupted video playback without buffering or lag. Also it&rsquo;s mostly used by banks.</p>
+</li>
+</ul>
+<h4 id="3packet-switching">3.Packet Switching</h4>
+<ul>
+<li>Definition: Breaking data into packets for efficient routing using multiple </li>
+<li>Why It Matters: Enables scalable network operation and efficient resource usage</li>
+<li>Real Example: When streaming video, your content is broken into small packets that travel independently</li>
+</ul>
+<h4 id="4connectionless-communication">4.Connectionless Communication</h4>
+<ul>
+<li>Definition: Each packet finds its own path independently</li>
+<li>Why It Matters: Ensures reliability and fault tolerance</li>
+<li>Example: Even if one packet takes a different route, your message still arrives complete</li>
+</ul>
+<h4 id="5layered-architecture">5.Layered Architecture</h4>
+<ul>
+<li>Definition: Separation of concerns across distinct protocol layers (like TCP/IP stack)</li>
+<li>Why It Matters: Enables independent development and updates of different parts</li>
+<li>Example: Your browser can be updated without changing the underlying networking code</li>
+</ul>
+<h4 id="6best-effort-delivery">6.Best Effort Delivery</h4>
+<ul>
+<li>Definition: Network attempts delivery without guarantees</li>
+<li>Why It Matters: Balances efficiency with reliability</li>
+<li>Real Example: Email servers try to deliver mail but won&rsquo;t crash if delivery fails</li>
+<li></li>
+</ul>
+<h3 id="recommended-principles-for-robustnessspeed">Recommended Principles for Robustness(speed)</h3>
+<ol>
+<li>
+<p>Open Architecture</p>
+<ul>
+<li>Definition: Designs should allow future modifications</li>
+<li>Benefits: Enables evolution and adaptation</li>
+<li>Example: New protocols can be added without breaking existing ones</li>
+</ul>
+</li>
+<li>
+<p>Robustness Principle</p>
+<ul>
+<li>Definition: Be conservative in sending, liberal in receiving</li>
+<li>Benefits: Ensures interoperability across implementations</li>
+<li>Example: Web browsers accept various formats of HTML even if not perfectly formatted</li>
+</ul>
+</li>
+<li>
+<p>Distribution</p>
+<ul>
+<li>Definition: Resources spread across multiple nodes</li>
+<li>Benefits: Improves efficiency and reliability</li>
+<li>Example: Content delivery networks store copies of content near users</li>
+</ul>
+</li>
+<li>
+<p>Scalability </p>
+<ul>
+<li>Definition: Systems designed to handle growth</li>
+<li>Benefits: Supports increasing usage and demands</li>
+<li>Example: Cloud services automatically add more resources during high demand</li>
+</ul>
+</li>
+<li>
+<p>Transparency</p>
+<ul>
+<li>Definition: Complexity hidden from users</li>
+<li>Benefits: Improves usability and maintenance</li>
+<li>Example: Users don&rsquo;t need to understand routing protocols to send emails</li>
+</ul>
+</li>
+</ol>
+<h4 id="comparison-between-packet-switching-and-circuit-switching">Comparison between Packet Switching and Circuit Switching:</h4>
+<ul>
+<li>
+<p>Helpful for Programmers: Circuit switching&lt;&gt; is favorable due to its guarantee of bandwidth (e.g., 5 Mbps). This predictability assists programmers in ensuring quality for end-users.</p>
+</li>
+<li>
+<p>Efficiency: Packet switching is more efficient overall because it minimizes set-up and tear-down time for connections. The need to reserve resources in circuit switching can lead to underutilization.</p>
+</li>
+<li>
+<p>Handling Failures: Packet switching deals better with failures, allowing routers to reroute packets seamlessly without requiring end hosts to manage reservations or change paths.</p>
+</li>
+<li>
+<p>Implementation Complexity: Packet switching is less complex to implement. Circuit switching necessitates tracking reservations, leading to increased management overhead for routers.</p>
+</li>
+</ul>
+<p>These principles work together to create a robust, scalable, and adaptable global network system. While the mandatory principles ensure basic functionality, the recommended principles help build resilient and future-proof systems. Understanding these principles helps developers design better internet applications and services.</p>
+<h3 id="bandwidth-propagation-delay-ensuring-qos">Bandwidth, Propagation Delay, Ensuring QOS:</h3>
+<p>Bandwidth and propagation delay are two fundamental concepts in computer networking that together influence the total time it takes for data to travel from sender to receiver.</p>
+<h4 id="bandwidth">Bandwidth</h4>
+<p>Bandwidth is the maximum rate at which data can be transmitted over a network link, typically measured in bits per second (bps). Whenever we downolad something over the internet for example like downloading games on steam we can see 
+it&rsquo;s in bytes not bits. 8 bits = 1byte.</p>
+<h4 id="transmission-delay">transmission delay</h4>
+<p>The transmission delay (sometimes called bandwidth delay) is the time required to push all the packet’s bits onto the wire. It depends on the packet size and the bandwidth of the link. well, there is a formula to calculate  transmission delay.
+<div class="highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Transmission delay = Packet size (bits) / Bandwidth (bps)
+</span></code></pre></div>
+Example: we&rsquo;ve a 40Mbps(megabits) connection and we&rsquo;ve a file which is 100MB (megaBytes). how much time it will take to transfer the data over the internet?</p>
+<p>solution: </p>
+<div class="highlight"><pre><span></span><code>Transmission delay = Packet size (bits) / Bandwidth (bps)
+                   = (100 * 8) megabits / 40 Megabits
+                   = 800/40
+                   = 20 second
+</code></pre></div>
+<h4 id="propagation-delay">Propagation Delay</h4>
+<p>Propagation delay is the time it takes for a signal(elecrical/optical) to travel from the sender to the receiver through the transmission medium (cable, fiber, air, etc.). It depends on the distance between sender and receiver and the propagation speed of the medium (which is typically a fraction of the speed of light). Here&rsquo;s the formula to calculate Propagation delay:
+<div class="highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a> Propagation delay = Distance / Propagation speed
+</span></code></pre></div>
+Example: 
+Suppose you send a signal from Bangladesh to China, a distance of 5,531 km (5,531,000 meters), and the signal travels at the speed of light in air (S=2.998×108S=2.998×108 m/s):
+<div class="highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a> Propagation delay = 5,531,000 / 2.998*10^8 
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>                   = 0.01844 second
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>                   = 18.45 milliseconds 
+</span></code></pre></div></p>
+<h4 id="hopping-delay">Hopping delay</h4>
+<p>It refers to the delay or latency introduced in a network that employs hopping techniques—where network parameters such as IP addresses, ports, or channels change periodically to enhance security or avoid interference. This delay arises because data packets must be forwarded through multiple intermediate nodes (or hops), and each hop introduces processing, queuing, and transmission delays.</p>
+<p>Thus, hopping delay can be understood as the latency component caused by:</p>
+<ul>
+<li>
+<p>The need to forward packets through multiple hops (routers or nodes), each adding processing and queuing delay.</p>
+</li>
+<li>
+<p>The synchronization and switching of network parameters at each hop, which may cause temporary packet loss or
+  retransmission delays.</p>
+</li>
+<li>
+<p>The overhead of managing time windows to accommodate delayed packets due to network latency.</p>
+</li>
+</ul>
+<h5 id="imp-what-is-a-queue-in-networking">Imp: What is a Queue in Networking:</h5>
+<p>A queue in networking is a data structure or buffer used to temporarily hold data packets as they wait to be processed, transmitted, or forwarded by a network device such as a router or switch. Queues operate on the First-In, First-Out (FIFO) principle, meaning the first packet to enter the queue is the first to be processed and leave the queue. </p>
+<p>Packet delay = Transmission delay + propagation delay + Queing delay</p>
+<h3 id="bandwidth-allocation">Bandwidth Allocation</h3>
+<p>Static allocation and dynamic allocation in networking most commonly refer to how network resources—especially IP addresses—are assigned to devices.Now we will talk about it both:</p>
+<h4 id="static-allocation">Static Allocation</h4>
+<ul>
+<li>
+<p>In static allocation, a network administrator manually assigns a fixed IP address or resource to a device.</p>
+</li>
+<li>
+<p>The device always uses the same IP address every time it connects to the network.</p>
+</li>
+<li>
+<p>This method is ideal for devices that require consistent, uninterrupted access, such as servers, printers, routers, or surveillance cameras.</p>
+</li>
+<li>
+<p>Static allocation simplifies network management for critical devices and ensures they are always reachable at the same address, but it can be time-consuming to manage for large numbers of devices and may lead to inefficient use of address space.</p>
+</li>
+</ul>
+<h4 id="dynamic-allocation">Dynamic Allocation</h4>
+<ul>
+<li>
+<p>In dynamic allocation, resources (typically IP addresses) are assigned automatically by a server (such as a DHCP server) when a device connects to the network.</p>
+</li>
+<li>
+<p>The assigned address can change each time the device reconnects.</p>
+</li>
+<li>
+<p>This method is efficient for large or frequently changing networks, such as home networks or offices with many mobile devices.</p>
+</li>
+<li>
+<p>Dynamic allocation reduces administrative overhead and optimizes resource usage, but devices may receive different addresses over time, which can complicate access to services that require a fixed address</p>
+</li>
+</ul>
+<h4 id="bursty-traffic">Bursty Traffic</h4>
+<p>It means it refers to a pattern where data transmission occurs in sudden, unpredictable spikes of high activity, followed by periods of low or minimal activity. Instead of a steady, predictable flow, bursty traffic comes in waves—one moment the network is quiet, and the next, it is flooded with data and it&rsquo;s just atrocious for network admins. Well let me give you some real world scenarios:</p>
+<ul>
+<li>Flash sales or viral social media posts that send thousands of visitors to a website at once: black friday sales&hellip;</li>
+<li>Large file transfers, software updates or downloads that hit many users simultaneously: windows update in the back..</li>
+<li>DDoS attacks or automated bots causing traffic surges: hackers trying to overload servers flooding requests&hellip;</li>
+</ul>
+<h4 id="resource-reservation">Resource Reservation</h4>
+<p>Resource reservation in networking is the process of reserving specific network resources—such as bandwidth or buffer space—along the path between a sender and receiver to guarantee a certain level of service quality (QoS) for data flows. This ensures that applications requiring steady performance, like video conferencing, VoIP, or real-time gaming, receive the necessary network resources to function smoothly, even during periods of congestion. Now you may 
+ask why and how does it work? Let me explain How Resource Reservation Works:</p>
+<ul>
+<li>
+<p>The process typically uses a protocol such as RSVP (Resource Reservation Protocol) most of the time.</p>
+</li>
+<li>
+<p>The sender initiates communication with a &lsquo;Path&rsquo; message, which travels through the network to the receiver,         mapping out the route as we talked about in the circuit switching.</p>
+</li>
+<li>
+<p>The receiver determines the required resources (e.g., bandwidth) and sends a &lsquo;Reservation&rsquo; request back along the   same path.</p>
+</li>
+<li>
+<p>Each router along the path checks if it can allocate the requested resources. If so, it reserves them and forwards   the reservation request to the next router.</p>
+</li>
+<li>
+<p>once all routers have confirmed the reservation, the receiver is notified, and the application can begin transmitting data with the guaranteed QoS.</p>
+</li>
+<li>
+<p>servations are temporary and periodically refreshed, allowing the network to adapt to changing conditions.</p>
+</li>
+</ul>
+<p>now let&rsquo;s talk about some Key Features and Benefits: </p>
+<ul>
+<li>
+<p>Quality of Service (QoS): Ensures consistent network performance for critical applications.</p>
+</li>
+<li>
+<p>Receiver-Oriented: Protocols like RSVP are typically initiated by the receiver, allowing for flexible and efficient resource management.</p>
+</li>
+<li>
+<p>Supports Unicast and Multicast: Resource reservation can be used for both one-to-one and one-to-many communications.</p>
+</li>
+<li>
+<p>Temporary and Adaptive: Reservations are not permanent; they are updated or released as application needs change.</p>
+</li>
+</ul>
+<h4 id="network-efficiency">Network Efficiency</h4>
+<p>Network efficiency refers to how effectively a network achieves its goals of fast, reliable communication and smooth data transfer with minimal resource waste or downtime. There are 6 common terms we&rsquo;ve to ensure to build an efficient networking infustructure:</p>
+<ol>
+<li>
+<p>Throughput: The actual rate at which data is successfully transferred across the network. High throughput means    the network can move large amounts of data efficiently. Example: A video streaming service like Netflix measures throughput by how many megabits per second (Mbps) of video data are successfully delivered to viewers. If a user can stream a 4K video without buffering, the network is achieving high throughput, efficiently moving large data volumes to the end user.</p>
+</li>
+<li>
+<p>Bandwidth Utilization: Measures how much of the available bandwidth is being used. Efficient networks maximize usage without causing congestion or overloading links. Example: A corporate network has a 1 Gbps internet link. During peak business hours, network monitoring tools show that average usage is around 800 Mbps, meaning 80% of the available bandwidth is being used. This indicates efficient bandwidth utilization, as the link is neither underused nor overloaded, avoiding congestion and maximizing value from the investment.</p>
+</li>
+<li>
+<p>Latency: The time it takes for data to travel from source to destination. Lower latency is a sign of higher efficiency, especially for real-time applications. Example: Online gamers experience latency as &ldquo;ping.&rdquo; If a game server is located close to the player, the round-trip time for data packets might be just 20 milliseconds (10s for data-out 10s for data-in), resulting in smooth gameplay. Higher latency (e.g., 200 ms) would cause noticeable lag, reducing efficiency for real-time applications like gaming or video calls.</p>
+</li>
+<li>
+<p>Packet Loss and Errors: Efficient networks minimize data loss and transmission errors, ensuring reliable delivery. Example : It can occcur due to hopping multiple nodes or routers causing data loss over the tranmission 
+medium.Technologies like forward error correction (FEC) help maintain high throughput and reliability even if some packets are lost.</p>
+</li>
+<li>
+<p>Upime and Reliability: High network efficiency is associated with minimal downtime and consistent availability of network services. Example: As an Isp provier we&rsquo;ve to ensure 99.99% guaranteed uptime.This means the network can&rsquo;t be unavailable for less than 5 minutes per year.Well that&rsquo;s a tough job to ensure. High network efficiency is demonstrated by minimal downtime and consistent service availability, which is critical for businesses relying on continuous connectivity.</p>
+</li>
+<li>
+<p>Resource Consumption: Efficient use of CPU, memory, and other network resources to prevent bottlenecks and ensure smooth operation. Example: A data center optimizes its server workload so that CPU and memory usage are balanced across all machines what we call the load balancer. By preventing any single server from becoming a bottleneck, the network can handle more simultaneous connections and data transfers smoothly, improving overall efficiency. So as a 
+great engineer we have to design Horizontal and Vertical Scaling to distribute loads evenly.</p>
+</li>
+</ol>
+<h4 id="network-congestion">Network congestion</h4>
+<p>Network congestion occurs when the volume of data traffic exceeds the network’s capacity to handle it efficiently. This typically happens when too many data packets are sent through a network node or link at the same time, overwhelming available bandwidth and resources. As a result, the network experiences degraded performance, including increased latency (delays), packet loss, jitter (variability in packet arrival times), and reduced throughput (overall data transfer rate). In one sentence - you don&rsquo;t have enough bandwidth .Let&rsquo;s imagine a scenario and try to understand it in a better way.</p>
+<p>Scenario: Imagine a network with 300/400 users.On a regular day, the network operates smoothly, handling emails, web browsing, and occasional video calls.However, let&rsquo;s imagine argentina and brazil is competeing against each other.
+What will happen?</p>
+<ul>
+<li>
+<p>The total data demand far exceeds the available network bandwidth.</p>
+</li>
+<li>
+<p>Routers and switches become overwhelmed, causing their buffers to fill up.</p>
+</li>
+<li>
+<p>As buffers overflow, packets are dropped, resulting in packet loss.</p>
+</li>
+<li>
+<p>Applications (especially real-time ones like video calls) experience jitter and lag.</p>
+</li>
+<li>
+<p>users notice significant delays in sending/receiving emails, slow file transfers, and frozen video calls.</p>
+</li>
+<li>
+<p>Some connections may time out entirely, forcing users to reconnect.</p>
+</li>
+</ul>
+<h4 id="transient-overload">Transient overload</h4>
+<p>Transient overload in networking refers to a temporary condition where the demand on network resources (such as bandwidth, processing power, or memory) exceeds the available capacity for a short period. Unlike sustained overload, which is continuous or long-lasting, transient overload is brief and often caused by sudden spikes or bursts in network traffic. These overloads typically resolve themselves quickly as the burst subsides or as the system adapt. Example: Imagine a popular e-commerce website like alibaba during a flash sale. For most of the day, the server handles a steady stream of customer requests comfortably. However, when the sale begins at noon, thousands of users attempt to access the site and place orders at the exact same moment. Disaster may happen:</p>
+<ul>
+<li>
+<p>The number of incoming requests per second suddenly spikes, far exceeding the server’s processing and bandwidth capacity.</p>
+</li>
+<li>
+<p>The server’s request queues fill up rapidly, and some requests may be dropped or delayed.</p>
+</li>
+<li>
+<p>Users may experience slow page loads, timeouts, or temporary inability to complete transactions.</p>
+</li>
+</ul>
+<p>This overload lasts only a few minutes, until the initial rush subsides and the traffic returns to normal levels.
+BTW there are 2 Types of Transient Overload:</p>
+<ul>
+<li>Alternating Overload: The load alternates between high and low, with overload periods equal to low-load periods.</li>
+<li>Intermittent Overload: The load is usually low, but there are occasional, evenly spaced spikes of overload</li>
+</ul>
+<p>we&rsquo;ve come a long way, yay!!! now we will talk about Routing principles and how packets are being send through.</p>
+<h4 id="routing-principles-overview">Routing principles overview</h4>
+<p>Before explaining routing and routers I&rsquo;d like to explain how data packets are send over the wires or a medium.</p>
+<p><div class="highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Sender(mac Addr1)(packets) ===NAT===&gt;&gt;&gt; router1(ip1) ===NAT===&gt;&gt;&gt; router2(ip2) ===&gt;&gt;&gt; revicer2(mac addr2)(packet recived)
+</span></code></pre></div>
+simple explanation :</p>
+<ul>
+<li>
+<p>Sender (mac Addr1): This is the main node, identified by its MAC address (mac Addr1). It sends a data packet toward the destination.</p>
+</li>
+<li>
+<p>NAT (at router1 with ip1): The packet first reaches router1, which uses Network Address Translation (NAT). NAT changes the packet&rsquo;s source IP address from the sender&rsquo;s private IP to router1&rsquo;s public IP (ip1). This hides the sender&rsquo;s private IP from the outside network.</p>
+</li>
+<li>
+<p>NAT (at router2 with ip2): The packet then reaches router2, which also uses NAT. Router2 changes the source IP address again, this time from router1&rsquo;s public IP (ip1) to router2&rsquo;s public IP (ip2). Now, to the outside world, the packet looks like it came from router2.</p>
+</li>
+<li>
+<p>Receiver2 (mac addr2): Finally, the packet arrives at the destination node, identified by its MAC address (mac addr2). When the response is sent back, each NAT router reverses the address translation so the reply can find its way back to the original sender.</p>
+</li>
+</ul>
+<p>In summary:
+At each NAT router, the source IP address in the packet is replaced with the router&rsquo;s own public IP. This process hides the internal network structure and allows multiple devices to share a single public IP address. The routers keep track of these translations so return traffic can be routed correctly back to the original sender.But the question is 
+do we really get the idea what router did? It just routed our package to the sender to make a transaction.Let me elaborate a detailed Routing Process Example:</p>
+<ul>
+<li>Initiation: A source node wants to send data to a destination node.</li>
+<li>Packet Creation: The data is divided into packets, each labeled with the destination IP address.</li>
+<li>Routing Table Lookup: The router checks its routing table to find the best next hop for the packet based on the shortest or least-cost path.</li>
+<li>Packet Forwarding: The packet is forwarded from router to router (hops) until it reaches the destination.</li>
+<li>Reassembly: At the destination, packets are reassembled into the original data</li>
+</ul>
+<h4 id="routing-principles">Routing principles</h4>
+<p>Routing in networking is the process of selecting paths in a network along which data packets travel from a source to a destination. The core principles of routing involve determining the optimal path, forwarding packets, and maintaining routing information dynamically or statically to ensure efficient data delivery. Well, there are 6 
+mandatory routing principles:</p>
+<h5 id="1-path-determination">1. Path Determination:</h5>
+<p>Routing algorithms calculate the best possible path for data packets to travel across the network. This involves evaluating multiple possible routes and selecting the optimal one based on specific metrics such as hop count, bandwidth, delay, or cost.</p>
+<h5 id="2-routing-tables">2. Routing Tables:</h5>
+<p>Routers maintain routing tables, which are data structures containing information about network destinations and the next hop to reach them. These tables are updated either manually (static routing) or automatically (dynamic routing) to reflect the current network topology and conditions.</p>
+<h5 id="3-routing-metrics">3. Routing Metrics:</h5>
+<p>Routing decisions rely on metrics to assess the desirability of a route. Common metrics include:
+- Hop count (number of intermediate routers).
+- Bandwidth (capacity of the link).
+- Delay (time taken for data to traverse the path).
+- Cost (an abstract value representing route preference).</p>
+<h5 id="4-types-of-routing">4. Types of Routing:</h5>
+<p>Static Routing: Routes are manually configured by network administrators. It offers fine control but lacks scalability and adaptability to network changes.</p>
+<p>Dynamic Routing: Routers automatically discover and maintain routes using routing protocols that adapt to network topology changes and traffic conditions. This improves flexibility and fault tolerance.</p>
+<h5 id="5-routing-protocols">5. Routing Protocols:</h5>
+<p>Routing protocols define rules for routers to communicate routing information and update routing tables. They can be categorized as:
+Interior Gateway Protocols (IGPs): Operate within a single autonomous system (AS), e.g., RIP, OSPF, EIGRP.</p>
+<p>Exterior Gateway Protocols (EGPs): Manage routing between different autonomous systems, e.g., BGP.</p>
+<h5 id="6-packet-forwarding-and-hopping">6. Packet Forwarding and Hopping:</h5>
+<p>When a data packet is sent, routers forward it hop-by-hop through intermediate nodes until it reaches the destination. The packet header contains the destination address, and each router uses its routing table to determine the next hop</p>
+<p><a href="#top">Back to top</a> <a href="#top"><img alt="⬆" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b06.svg" title=":arrow_up:" /></a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2023 <a href="https://github.com/Mysthological"  target="_blank" rel="noopener">Mysthological</a>
+
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Mysthological" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1M480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2m-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3m-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.sections", "navigation.tabs", "navigation.expand", "navigation.path", "navigation.indexes", "toc.follow", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide", "navigation.footer", "content.action.edit", "content.code.copy", "content.code.select"], "search": "assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "stable", "provider": "Mysthological"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
